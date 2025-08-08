@@ -16,7 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Maine Coon"
-        android:id="@+id/modTituloProduto"/>
+        android:id="@+id/modTituloProduto"
+        android:textSize="15sp"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="5sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/moochi_jelly"
+        />
 
 </LinearLayout>
 

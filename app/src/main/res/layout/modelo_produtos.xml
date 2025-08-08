@@ -22,7 +22,7 @@
         android:textAlignment="center"
         android:layout_marginTop="5sp"
         android:textStyle="bold"
-        android:fontFamily="@font/moochi_jelly"
+        android:fontFamily="@font/starbim"
         />
 
 </LinearLayout>

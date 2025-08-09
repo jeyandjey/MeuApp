@@ -1,5 +1,6 @@
 package br.com.etecia.myapp;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -9,7 +10,17 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
+    private Context context;
+    private List<Produtos> lstProdutos;
+
+    public Adaptador(Context context, List<Produtos> lstProdutos) {
+        this.context = context;
+        this.lstProdutos = lstProdutos;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -34,6 +34,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    holder.modTituloProduto.setText(lstProdutos.get(position).getTitulo());
+    holder.modImagemProduto.setImageResource(lstProdutos.get(position).getImagem());
 
     }
 

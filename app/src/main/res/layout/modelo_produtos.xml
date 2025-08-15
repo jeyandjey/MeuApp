@@ -27,7 +27,8 @@
         android:fontFamily="@font/starbim"
         />
 
-
-
 </LinearLayout>
+
+
+
 </androidx.cardview.widget.CardView>

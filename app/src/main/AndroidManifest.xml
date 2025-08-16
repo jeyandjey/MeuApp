@@ -26,8 +26,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
+            <activity android:name=".DetalhesActivity"/>
         </activity>
+
+
     </application>
 
 </manifest>

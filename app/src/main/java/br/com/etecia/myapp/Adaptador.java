@@ -1,6 +1,7 @@
 package br.com.etecia.myapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,15 +35,22 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    holder.modTituloProduto.setText(lstProdutos.get(position).getTitulo());
-    holder.modImagemProduto.setImageResource(lstProdutos.get(position).getImagem());
-    holder.cardProdutos.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+        Produtos produto = lstProdutos.get(position);
 
-        }
-    });
+        holder.modTituloProduto.setText(produto.getTitulo());
+        holder.modImagemProduto.setImageResource(produto.getImagem());
+
+        holder.cardProdutos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetalhesActivity.class);
+                intent.putExtra("titulo", produto.getTitulo());
+                intent.putExtra("imagem", produto.getImagem());
+                context.startActivity(intent);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {

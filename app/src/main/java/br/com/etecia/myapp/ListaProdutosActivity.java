@@ -54,5 +54,7 @@ public class ListaProdutosActivity extends AppCompatActivity {
 
         Adaptador adapter = new Adaptador(getApplicationContext(),ltsProdutos);
         idListaProdutos.setAdapter(adapter);
+
+
     }
 }
